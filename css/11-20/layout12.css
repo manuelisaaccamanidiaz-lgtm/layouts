@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f8f8f8;
+    font-family: 'avenir', sans-serif;
+    overflow-x: hidden;
+}
+
+.container {
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 80px 5%;
+    min-height: 100vh;
+}
+
+/* --- HERO TEXT --- */
+.hero-text {
+    max-width: 400px;
+    margin-bottom: 50px;
+}
+
+.hero-text h1 {
+    font-size: 5rem;
+    line-height: 1;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+}
+
+.btn-explore {
+    background-color: #222;
+    color: white;
+    padding: 15px 45px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+}
+
+/* --- COLLAGE DE IMÁGENES --- */
+/* Usamos absolute para colocarlas exactamente como en la imagen */
+.collage img {
+    position: absolute;
+    border-radius: 20px;
+    object-fit: cover;
+    width: 280px;
+    height: 380px;
+}
+
+.img-1 {
+    top: 5%;
+    right: 2%;
+}
+
+.img-2 {
+    top: 30%;
+    right: 24%;
+    z-index: 1;
+}
+
+.img-3 {
+    bottom: 2%;
+    right: 46%;
+}
+
+/* --- DECORACIONES (SVG o Imágenes de fondo) --- */
+/* --- DECORACIONES --- */
+.shape {
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 0; /* Asegura que estén detrás de las imágenes si es necesario */
+}
+
+/* Sol de la derecha (el que está cerca de la imagen azul) */
+.sun-right { /* Corregido el nombre */
+    top: 55%; 
+    right: 5%;
+    width: 180px;
+    height: 180px;
+    background-image: url('/media/image/11-20/layout12/sun.png'); /* Asegúrate de tener la imagen */
+}
+
+/* Sol del medio (el que está entre las fotos) */
+.sun-mid {
+    top: 40%;
+    left: 45%;
+    width: 200px;
+    height: 200px;
+    background-image: url('/media/image/11-20/layout12/sun.png');
+    z-index: 2;
+}
+
+/* Ondas superiores */
+.wave {
+    top: 10%;
+    left: 35%;
+    width: 300px;
+    height: 100px;
+    background-image: url('/media/image/11-20/layout12/waves.png');
+}
+
+/* Espiral/Resorte inferior */
+.spiral {
+    bottom: 50px;
+    left: 80px;
+    width: 120px;
+    height: 200px;
+    background-image: url('/media/image/11-20/layout12/spiral.png');
+}
+
+/* --- TESTIMONIO ABAJO --- */
+.testimonial {
+    position: absolute;
+    bottom: 9%;
+    right: 10%;
+    max-width: auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.testimonial img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.testimonial p {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.5;
+}

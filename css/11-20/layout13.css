@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr 1fr;
+    gap: 10px;
+    padding: 20px 2%;
+    min-height: 100vh;
+    align-items: center;
+    position: relative;
+    background: white;
+}
+
+/* --- SOLUCIÓN AL GRADIENTE Y TEXTO --- */
+.medio {
+    position: relative;
+    z-index: 20; /* Mucho más alto que las estrellas */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* El resplandor ahora es un fondo del div, no una imagen que estorbe */
+.medio::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 140%; 
+    height: 100%;
+    background: radial-gradient(circle, rgba(173, 226, 230, 0.5) 0%, rgba(255, 245, 200, 0.4) 40%, transparent 75%);
+    z-index: -1; /* Se va atrás del texto del propio div .medio */
+    pointer-events: none;
+}
+
+.medio h1 {
+    font-size: 6rem;
+    line-height: 0.85;
+    margin: 20px 0;
+    color: #1a1a1a;
+    position: relative; /* Indispensable para que el z-index del padre le afecte */
+}
+
+.btn-explore {
+    position: relative;
+    z-index: 30; /* El más alto de todos */
+    background-color: #1a1a1a;
+    color: white;
+    padding: 18px 50px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* --- IMÁGENES MÁS GRANDES --- */
+.izquierda img, .derecha img {
+    width: 100%;
+    height: 650px; /* Aumentamos el tamaño */
+    object-fit: cover;
+    border-radius: 400px 400px 0 0;
+}
+
+/* --- LAS ESTRELLAS (Coordenadas fijas) --- */
+.star-top { top: 15%; left: 22%; position: absolute; width: 50px; z-index: 10; }
+.star-bottom { bottom: 25%; right: 22%; position: absolute; width: 50px; z-index: 10; }
+.sun { bottom: 10%; right: 5%; position: absolute; width: 90px; z-index: 10; }
+.star-tilted { top: 10%; left: 5%; position: absolute; width: 70px; z-index: 10; }
+
+/* Invertir el orden si la derecha/izquierda siguen mal */
+.izquierda { order: 1; }
+.medio { order: 2; }
+.derecha { order: 3; }
