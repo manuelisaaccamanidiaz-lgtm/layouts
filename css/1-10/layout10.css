@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #2f2f2f;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden; /* Evita que el scroll arruine la estética */
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr; /* Damos un poco más de espacio a la galería */
+    min-height: 100vh;
+    padding: 0 5%;
+    align-items: center; /* Centra todo el contenido verticalmente */
+    gap: 40px;
+}
+
+.text {
+    display: flex;
+    flex-direction: column; /* Pone el título, p y botón uno debajo del otro */
+    justify-content: center;
+    align-items: flex-start; /* Alinea todo a la izquierda */
+}
+
+.title h1 {
+    font-size: 5.5rem; /* Un tamaño imponente como en el diseño */
+    line-height: 1.1;
+    font-weight: 800;
+}
+
+/* Colores específicos según tu código */
+#rosado { color: #f59edc; }
+#celeste { color: #6fd5f7; }
+#verdoso { color: #79ffaa; }
+
+.text p {
+    color: #ccc;
+    margin: 30px 0; /* Espacio arriba y abajo del párrafo */
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 400px;
+}
+
+.text button {
+    background-color: white;
+    color: #2f2f2f;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 50px; /* Botón ovalado */
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.text button:hover {
+    transform: scale(1.05);
+    background-color: #eee;
+}
+
+/* AJUSTE DE LA GALERÍA */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas iguales */
+    gap: 15px; /* Espacio entre las fotos */
+}
+
+.gallery img {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Hace que todas las fotos sean perfectamente cuadradas */
+    object-fit: cover;
+    border-radius: 25px; /* Bordes más redondeados como en la imagen */
+}

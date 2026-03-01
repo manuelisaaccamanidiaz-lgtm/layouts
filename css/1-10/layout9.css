@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #97A3A3;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden; /* Evita que el scroll arruine la estética */
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Separa el texto arriba y la barra abajo */
+    padding: 80px 10%;
+}
+
+/* --- IMÁGENES POSICIONADAS --- */
+.img-top-right {
+    position: absolute;
+    top: 0;
+    right: 60px;
+    width: 35%; /* Ocupa casi la mitad derecha */
+    height: 50%;
+    object-fit: cover;
+}
+
+.img-bottom-left {
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+    width: 25%;
+    height: 50%;
+    object-fit: cover;
+}
+
+/* --- TEXTO SUPERIOR --- */
+.hero-content {
+    position: relative;
+    z-index: 10;
+    max-width: 500px;
+}
+
+.hero-content h1 {
+    font-size: 5rem;
+    color: #222;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.btn-explore {
+    background-color: #363830;
+    color: white;
+    padding: 15px 40px;
+    border-radius: 50px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+/* --- BARRA DE ESTADÍSTICAS --- */
+.stats-bar {
+    position: relative;
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 100); /* Transparencia elegante */
+    backdrop-filter: blur(10px); /* Efecto vidrio esmerilado */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding: 40px 60px;
+    border-radius: 100px; /* Curva solo a la izquierda */
+    margin-left: auto; /* Empuja la barra a la derecha */
+    width: 80%;
+}
+
+.stat-item h2 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #363830;
+}
+
+.stat-item hr {
+    width: 30px;
+    height: 3px;
+    border: 1px solid #333;
+    margin-bottom: 15px;
+    background-color: #333;
+}
+
+.stat-item p {
+    font-size: 0.8rem;
+    color: #444;
+}
