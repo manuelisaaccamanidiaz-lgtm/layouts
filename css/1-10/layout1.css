@@ -1,0 +1,61 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e6e6e6;
+  font-family: 'Avenir', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* HERO */
+.text {
+  max-width: 100%;
+  margin: 80px auto;
+  text-align: center;
+}
+
+.text h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.text p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.text button {
+  background: #222;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* GALLERY */
+.gallery {
+  display: grid; /* Activa el sistema de rejilla [3] */
+  
+  /* Crea 4 columnas de igual tamaño usando la unidad fr [5, 6] */
+  grid-template-columns: repeat(4, 1fr); 
+  
+  /* Define el espacio entre filas y columnas [7, 8] */
+  gap: 20px; 
+  
+  /* Centra la galería y le da un ancho máximo para que no se pegue a los bordes */
+  max-width: 1200px;
+  margin: 40px auto; 
+}
+.card img {
+  width: 100%;       /* La imagen ocupa todo el ancho de la celda [9] */
+  height: auto;      /* Mantiene la proporción de la imagen [9] */
+  display: block;    /* Elimina espacios extra debajo de la imagen [10] */
+  border-radius: 15px; /* Esquinas redondeadas como querías */
+}

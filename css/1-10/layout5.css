@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e6e6e6;
+  font-family: 'Avenir', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+/* El contenedor que centra todo el contenido */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* TÍTULO PRINCIPAL */
+.container h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 60px; /* Separa el título de las columnas */
+  /*line-height: 1.1;*/
+}
+
+/* GRID DE LAS 3 COLUMNAS */
+.contenedores {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* 3 columnas iguales */
+  gap: 40px; /* Espacio entre columnas */
+}
+
+/* CADA COLUMNA INDIVIDUAL */
+.contenedor {
+  display: flex;
+  flex-direction: column; /* Apila número, texto e imagen */
+}
+
+.contenedor h3 {
+  font-size: 1.5rem;
+  color: #999;
+  margin-bottom: 10px;
+}
+
+.contenedor p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 25px; /* Espacio antes de la imagen */
+  min-height: 80px; /* Ayuda a que las imágenes se alineen si el texto varía */
+}
+
+/* LAS IMÁGENES */
+.contenedor img {
+  width: 100%;       /* Ocupa todo el ancho de la columna */
+  aspect-ratio: 1/1; /* Las hace perfectamente cuadradas */
+  object-fit: cover; /* Evita que se deformen */
+}

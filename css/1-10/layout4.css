@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e6e6e6;
+  font-family: 'Avenir', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fcfcfc; /* Un blanco roto como el de la imagen */
+  font-family: sans-serif;
+  overflow-x: hidden; /* Evita scrolls raros */
+}
+
+.main-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Dos mitades exactas */
+  min-height: 100vh; /* Ocupa todo el alto de la ventana */
+}
+
+/* --- SECCIÓN IZQUIERDA --- */
+.gallery {
+  display: flex;
+  align-items: flex-end; /* Empuja la imagen al fondo (esquina inferior) */
+}
+
+.gallery img {
+  width: 100%;
+  height: 100%;     /* Ocupa todo el alto disponible */
+  object-fit: cover; /* Evita que la foto se deforme al estirarse */
+  display: block;
+  padding-top: 10%;
+}
+
+/* --- SECCIÓN DERECHA --- */
+.content-wrapper {
+  display: flex;
+  align-items: center;   /* Centra el bloque de texto verticalmente */
+  justify-content: center; /* Centra el bloque de texto horizontalmente */
+  padding: 10px;         /* Espacio de seguridad */
+}
+
+/* El truco del centrado: este div limita el ancho del texto */
+.inner-content {
+  max-width: 500px; /* Ajusta este valor para que el texto se vea como en tu imagen */
+  width: 100%;
+}
+
+.main-head h1 {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  margin-bottom: 30px;
+}
+
+.main-head p {
+  color: #666;
+  margin-bottom: 30px;
+}
+.content-wrapper p{
+    font-size: 1.2rem;
+}
+.btn-explore {
+  background: #222;
+  color: white;
+  padding: 15px 45px;
+  border-radius: 15px; /* Bordes bien redondeados */
+  border: none;
+  cursor: pointer;
+  margin-bottom: 80px; /* Espacio antes de los números */
+}
+
+/* Los bloques 01 y 02 */
+.parrafos {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.item h3 {
+  font-size: 1.5rem;
+  color: #bbb;
+  margin-bottom: 5px;
+}
+
+.item p {
+  font-size: 0.9rem;
+  color: #777;
+}

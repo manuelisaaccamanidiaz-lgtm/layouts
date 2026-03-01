@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #e6e6e6;
+  font-family: 'Avenir', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  padding: 50px 0;
+}
+/* El contenedor centraliza todo y da el espacio a los lados */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* FILA SUPERIOR */
+.top-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* 3 columnas iguales */
+  gap: 30px;
+  align-items: start;
+  margin-bottom: 50px;
+}
+
+.text-content {
+  padding-top: 40px; /* Para que el texto no empiece tan arriba */
+}
+
+.text-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.btn-main {
+  background: #222;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+/* El truco de la imagen que está más arriba */
+.img-offset {
+  margin-top: -30px; /* Sube un poco la imagen central */
+}
+.img-downset{
+    margin-top: 100px;
+}
+
+.large-image img {
+  width: 100%;
+  height: 450px; /* Ajusta según necesites */
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+/* FILA INFERIOR */
+.bottom-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* También 3 columnas */
+  gap: 30px;
+}
+
+.card .number {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+.card img {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Las hace perfectamente cuadradas */
+  object-fit: cover;
+  border-radius: 15px;
+}
