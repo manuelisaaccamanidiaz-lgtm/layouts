@@ -1,0 +1,147 @@
+/* 1. Base y Limpieza */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: #fdfbf7;
+    font-family: 'Times', serif; /* O la fuente que prefieras */
+    min-height: 100vh;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Tres columnas iguales y obligatorias */
+    align-items: center;
+    gap: 15px;
+    padding: 3%;
+    height: 100vh;
+    position: relative; /* Para que las estrellas se posicionen respecto a esto */
+}
+/*orden de los contenedores*/
+.left{order: 1;}
+.medio{order: 2;}
+.right{order: 3;}
+/* 2. Control de la Imagen Central (La "Ancla") */
+.image-middle {
+    display: flex;
+    justify-content: center;
+    height: auto;
+}
+
+.image-middle img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 500px; /* Hace la forma de arco/ovalada */
+}
+
+/* 3. Bloques de Texto (Ya no se moverán de su columna) */
+.text-left, .text-right {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.text-left { align-items: flex-start; text-align: left;}
+.text-right { align-items: flex-end; text-align: right; }
+
+h1 { font-size: 3.5rem; line-height: 1; margin-bottom: 20px; color: #1a1a1a; }
+p { font-size: 0.9rem; line-height: 1.5; color: #444; max-width: 250px; }
+
+button {
+    margin-top: 20px;
+    padding: 10px 25px;
+    background-color: #3b5a45; /* Verde oscuro como el de tu imagen */
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* 4. Las imágenes flotantes (Usamos absolute pero con valores controlados) */
+.image-left, .image-right {
+    position: absolute;
+    z-index: 5;
+    pointer-events: none; /* Para que no estorben al hacer click */
+}
+
+/* Ajusta estos valores para "separar" las fotos del centro */
+.image-left {
+    left: 22%; /* Cerca de la columna izquierda */
+    top: 20%;
+}
+
+.image-right {
+    right: 22%; /* Cerca de la columna derecha */
+    bottom: 20%;
+}
+
+.image-left img, .image-right img {
+    width: 150px;
+    height: 200px;
+    border-radius: 100px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 15px; /* Espacio entre las dos fotitos */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    flex-direction: row;
+}
+
+/* 5. Estrellas */
+.star-deco {
+    position: absolute;
+    width: 60px;
+    z-index: 10;
+}
+.star-1 { top: 10%; left: 30%; }
+.star-2 { bottom: 5%; right: 30%; }
+/* AJUSTES CLAVE PARA TU CSS EXISTENTE */
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr 1fr; /* Le damos un poco más de aire al centro */
+    align-items: center;
+    min-height: 100vh;
+    position: relative; 
+    overflow: hidden; /* Evita que las fotos que sobresalen creen scroll */
+}
+
+/* El bloque de fotos que "vuela" */
+.floating-bundle {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    gap: 20%;
+    z-index: 10; /* Por encima de todo */
+}
+
+/* Posicionamos el grupo izquierdo entre la columna 1 y 2 */
+.fb-left {
+    left: 15%; 
+    top: 70%;
+}
+
+/* Posicionamos el grupo derecho entre la columna 2 y 3 */
+.fb-right {
+    right: 15%;
+    top: 5%;
+}
+
+.floating-bundle img {
+    width: 140px; /* Tamaño fijo para que no se deformen */
+    height: 190px;
+    object-fit: cover;
+    border-radius: 100px; /* Forma de óvalo */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    background: #eee;
+}
+
+/* El desvío para que no se vean alineadas perfectamente (efecto Pinterest) */
+.fb-left img:nth-child(2) { margin-left: 5px; }
+.fb-right img:nth-child(2) { margin-left: 5px; }
+
+/* AJUSTE DEL TEXTO */
+h1 {
+    font-size: clamp(2.5rem, 4vw, 4rem); /* Se ajusta al tamaño de pantalla */
+    text-transform: capitalize;
+    font-weight: 800;    
+}
