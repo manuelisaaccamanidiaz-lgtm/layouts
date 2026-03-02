@@ -31,7 +31,7 @@ main {
     max-width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 500px; /* Hace la forma de arco/ovalada */
+    border-radius: 500px;
 }
 
 /* 3. Bloques de Texto (Ya no se moverán de su columna) */
