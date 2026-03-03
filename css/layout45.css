@@ -1,0 +1,53 @@
+/* Contenedor Principal */
+.gallery-mosaic {
+    display: flex; /* Alinea izquierda y derecha en la misma fila */
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    align-items: stretch; /* Obliga a ambos lados a tener la misma altura */
+}
+
+/* Lado Izquierdo */
+.side-left {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Ocupa el 50% */
+}
+
+.img-top {
+    width: 100%;
+    height: 60%; /* Proporción ajustable */
+    object-fit: cover;
+    display: block; /* Elimina el espacio pequeño debajo de las imágenes */
+}
+
+.bottom-split {
+    display: flex;
+    height: 40%;
+}
+
+.bottom-split img {
+    width: 50%; /* Dos imágenes al 50% cada una */
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Lado Derecho */
+.side-right {
+    flex: 1; /* Ocupa el otro 50% */
+}
+
+.side-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* IMPORTANTE: Quitar bordes o radios si quieres que choquen perfecto */
+img {
+    border: none;
+    margin: 0;
+    padding: 0;
+}

@@ -1,0 +1,112 @@
+/* 1. Base y Limpieza */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fdfaf5; /* Un tono crema suave */
+    color: #333333;
+    overflow-x: hidden;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Mitad imágenes, mitad texto */
+    min-height: 100vh;
+    align-items: center;
+    gap: 50px;
+    padding: 0 5%;
+}
+.container .left{order: -1;}
+.container .rigth{order: 1;}
+/* 2. El Puzzle de Imágenes (Izquierda) */
+.container > div:first-child {
+    display: flex;
+    gap: 20px;
+    height: 100%;
+    align-items: center;
+}
+
+.image-left, .image-right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+}
+
+/* Efecto escalonado: movemos una columna hacia arriba o abajo */
+.image-left { margin-top: -60px; }
+.image-right { margin-top: 60px; }
+
+.container img {
+    width: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+.right img {border-radius: 12%; border: 20px;}
+/* 3. Contenido (Derecha) */
+.hero h1 {
+    font-size: 4rem;
+    line-height: 1.1;
+    color: #333333; /* Color naranja snack */
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+button {
+    padding: 15px 40px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover { background-color: #333333; transform: translateY(-3px); }
+
+/* 4. Elementos Extra (Iconos y Caja) */
+.circles {
+    display: flex;
+    gap: 15px;
+    margin: 40px 0;
+}
+
+.circles img {
+    width: 20%;
+    height: 20%;
+    border-radius: 50%;
+    background: #fff;
+    padding: 10px;
+}
+
+.container .cuadrado {
+    display: flex;
+    gap: 30px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    width: 60%;
+    border-width: 10px;
+    border-color: #333333;
+}
+
+.cuadrado h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333333;
+}
+
+.cuadrado p {
+    font-size: 0.85rem;
+    color: #888;
+}

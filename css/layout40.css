@@ -1,0 +1,97 @@
+/* Layout General */
+.container {
+    max-width: 1100px;
+    margin: 50px auto;
+    background-color: #f4f7f4; /* Fondo suave del layout */
+    border-radius: 40px;
+    padding: 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+.top {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Texto a la izquierda, Planta a la derecha */
+    align-items: center;
+    gap: 40px;
+}
+.content{
+    z-index: 1;
+}
+
+/* Área de la planta y el arco */
+.visual-area {
+    position: relative; /* Necesario para que los hijos con absolute no se escapen */
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+/* El Arco de fondo (si no es imagen, se hace así) */
+.arch-bg {
+    position: absolute;
+    bottom: 0;
+    width: 280px;
+    height: 400px;
+    background-color: #dceddc; /* Verde muy clarito */
+    border-radius: 150px 150px 0 0; /* Forma de arco */
+    z-index: 1;
+}
+
+.main-plant {
+    position: relative;
+    z-index: 2; /* Por encima del arco */
+    height: 110%; /* Sobresale un poco del arco hacia arriba */
+    object-fit: contain;
+}
+
+
+.floating-seal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30%;
+    z-index: 0;
+}
+
+.btn-explore {
+    background: #2d2d2d;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 4px 4px 0px #888;
+    margin-top: 20px;
+}
+
+/* Sección inferior */
+.bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 60px;
+    background: white;
+    padding: 20px;
+    border-radius: 30px;
+    border: 1px solid #e0e0e0;
+}
+
+.info-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.info-card img {
+    width: 120px;
+    height: 100px;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.info-card p {
+    font-size: 0.85rem;
+    color: #666;
+}
