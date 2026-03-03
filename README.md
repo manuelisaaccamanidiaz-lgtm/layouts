@@ -1,6 +1,6 @@
-# 🎨 Layouts Web – Colección de 55 Diseños con HTML & CSS
+# 🎨 Layouts Web – Colección de 15 Diseños con HTML & CSS
 
-Este repositorio contiene una **colección de 55 layouts web** construidos únicamente con **HTML5 y CSS3**, enfocados en prácticas de maquetación, diseño visual y composición de estructuras web. Cada layout es una pieza independiente para experimentar o aprender cómo se construyen diferentes estructuras y patrones visuales sin JavaScript. :contentReference[oaicite:1]{index=1}
+Este repositorio contiene una **colección de 15 layouts web** construidos únicamente con **HTML5 y CSS3**, enfocados en prácticas de maquetación, diseño visual y composición de estructuras web. Cada layout es una pieza independiente para experimentar o aprender cómo se construyen diferentes estructuras y patrones visuales sin JavaScript.
 ---
 ## 🚀 Tecnologías Utilizadas
 Estas son las tecnologías y enfoques aplicados en los ejemplos:
@@ -16,28 +16,42 @@ Estas son las tecnologías y enfoques aplicados en los ejemplos:
 
 ---
 ## 🔑 Características Principales
-- ✅ **55 layouts listos para usar o estudiar**.
+- ✅ **15 layouts listos para usar o estudiar**.
 - 📏 Ejemplos de composiciones visuales con solo HTML y CSS.
 - 🧠 Enfoque didáctico para entender maquetación y diseño.
 - 📌 Estructuras variadas (cabeceras, grids, cards, secciones completas).
-- 🔍 Código limpio y organizado para aprendizaje. :contentReference[oaicite:3]{index=3}
+- 🔍 Código limpio y organizado para aprendizaje. :contentReference.
 
 ---
 ## 📂 Estructura del Proyecto
 Representación simplificada de cómo está organizado el repositorio:
+
 📦layouts
+
 ├── 📁 css
+
 │ ├── styles1.css
+
 │ ├── styles2.css
+
 │ └── ...
+
 ├── 📁 html
+
 │ ├── layout1.html
+
 │ ├── layout2.html
+
 │ └── ...
+
 ├── 📁 media
+
 │ └── image/
+
 │ ├── img1.png
+
 │ └── ...
+
 ├── README.md
 
 > Cada carpeta agrupa ejemplos relacionados:
