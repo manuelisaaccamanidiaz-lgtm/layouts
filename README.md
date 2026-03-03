@@ -85,3 +85,6 @@ Este proyecto está abierto a contribuciones. Si quieres mejorar estilos, agrega
 Todos los ejemplos están hechos sin JavaScript.
 Ideal para prácticas de diseño web, portfolios o inspiración de layouts.
 Recomendado abrir los archivos con Live Server para mejor experiencia visual.
+
+#url trabajo en equipo
+https://github.com/ldmmoreno2003-bot/entrega-proyecto-grupo.git
